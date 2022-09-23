@@ -12,10 +12,12 @@ import UserAvatar20 from '@carbon/icons/es/user--avatar/20';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, UIShellModule, IconModule],
+  imports: [BrowserModule, AppRoutingModule, UIShellModule, IconModule, GraphQLModule, HttpClientModule],
   providers: [IconService],
   bootstrap: [AppComponent],
 })
