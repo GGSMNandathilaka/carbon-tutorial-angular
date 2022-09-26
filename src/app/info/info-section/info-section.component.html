@@ -1,0 +1,19 @@
+<section ibmRow class="info-section info-section__r1">
+    <div ibmCol [columnNumbers]="{'md': 8, 'lg': 4}">
+        <h3 class="info-section__heading">{{heading}}</h3>
+    </div>
+    <ng-container *ngFor="let item of items">
+        <app-info-card
+                ibmCol
+                [columnNumbers]="{'md': 4, 'lg': 4}"
+                [content]="item.content"
+                [heading]="item.heading">
+
+            <ng-container [ngSwitch]="item.icon">
+                <svg ibmIcon="person--favorite" size="32" *ngSwitchCase="'person-favorite32'"></svg>
+                <svg ibmIcon="globe" size="32" *ngSwitchCase="'globe32'"></svg>
+                <svg ibmIcon="application" size="32" *ngSwitchCase="'application32'"></svg>
+            </ng-container>
+        </app-info-card>
+    </ng-container>
+</section>
